@@ -1,0 +1,22 @@
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+		script(src='javascripts/jquery-1.12.1.js')
+		script(src='javascripts/bootstrap.js')
+		script(src='javascripts/index.js')
+
+	body
+		nav.navbar.navbar-default
+			.container-fluid
+				.navbar-header 
+					a.navbar-brand 
+						大爆炸
+
+				
+		h1 这里
+		block content
+		button(type="button" id="myButton" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off") ddd
+
