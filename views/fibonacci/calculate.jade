@@ -1,4 +1,20 @@
 extends ../layout
 
 block content
-	h2 在这里计算fibonacci算法的响应时间
+	div(ng-controller="FibonacciCalculateCtrl")
+		h2 在这里计算fibonacci算法的响应时间
+		hi 让我们来计算有趣的fibonacci吧
+		.alert.alert-warning 
+			strong 警告！
+			由于计算量非常大，这可能会令页面无响应，请耐心等待
+		.input-group
+			span.input-group-addon 我想使用fibonacci算法计算
+			input.form-control(type="number" min="0" max="199" ng-model="calculatetimes" required)
+			span.input-group-addon 次
+		br
+		h1
+		div(ng-show="calculatetimes")
+			button.btn.btn-info(type="button" id="btnCalculate") 我要计算{{calculatetimes}}次
+
+
+		hi {{testvar}}

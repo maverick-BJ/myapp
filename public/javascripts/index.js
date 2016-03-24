@@ -1,5 +1,6 @@
 
 $(function () {
+
 	console.log("111");
 	$('#myButton').on('click', function () {
 		console.log('asdfdsafdsafads');

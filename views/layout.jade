@@ -1,19 +1,27 @@
 doctype html
-html
+html(ng-app="myapp")
 	head
+		meta(charset="utf-8")
 		title= title
 		link(rel='stylesheet', href='/stylesheets/style.css')
 		link(rel='stylesheet', href='/stylesheets/bootstrap.css')
-		script(src='javascripts/jquery-1.12.1.js')
-		script(src='javascripts/bootstrap.js')
-		script(src='javascripts/index.js')
+		script(src='/javascripts/jquery-1.12.1.js')
+		script(src='/javascripts/bootstrap.js')
+		script(src='/javascripts/index.js')
+		script(src='/javascripts/angular.js')
+
+		script(src="/javascripts/controller/fibonacci/calculate.js")
 
 	body
 		include navbar
 
 
 				
-		h1 这里
+		h3 layout页面(导航位置) {{'hello world'}}
+		br
+		br
 		block content
-		button(type="button" id="myButton" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off") ddd
+		br
+		br
+		button(type="button" id="myButton" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off") 全局按钮
 
