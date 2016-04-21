@@ -9,12 +9,22 @@ block content
 			由于计算量非常大，这可能会令页面无响应，请耐心等待
 		.input-group
 			span.input-group-addon 我想使用fibonacci算法计算
-			input.form-control(type="number" min="0" max="199" ng-model="calculatetimes" required)
+			input.form-control(type="number" min="0" max="199" ng-model="calculateTimes" placeholder="请输入1-199的数字" ng-change="initResult()" required)
 			span.input-group-addon 次
 		br
 		h1
-		div(ng-show="calculatetimes")
-			button.btn.btn-info(type="button" id="btnCalculate") 我要计算{{calculatetimes}}次
+		div(ng-show="calculateTimes&&(calculateTimes%1)==0")
+			button.btn.btn-info(type="button" id="btnCalculate" ng-click="calculate()") 我要计算{{calculateTimes}}次
+		.panel.panel-warning(ng-show="calculateSuccess")
+			.panel-heading
+				h3.panel-heading 完成
+			.panel-body
+				结果：{{calculateResult}}   
+		.panel.panel-danger(ng-show="calculateError")
+			.panel-heading
+				h3.panel-heading 失败
+			.panel-body 计算失败请重试
+				
 
 
 		hi {{testvar}}
